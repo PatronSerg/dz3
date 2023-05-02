@@ -5,3 +5,9 @@
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
+Console.WriteLine("Ввидите число:");
+int N =Convert.ToInt32(Console.ReadLine());
+for(int i = 1 ; i < N + 1 ; i++) 
+{
+Console.WriteLine($"Квадрат числа {i} " + i*i); 
+}

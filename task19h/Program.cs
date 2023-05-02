@@ -17,7 +17,7 @@ static bool IsPalindrome(int number)
     return originalNumber == reversedNumber;
 }
 
-Console.Write("Введите пятизначное число: ");
+Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine(IsPalindrome(number) ? "Число является палиндромом" : "Число не является палиндромом");

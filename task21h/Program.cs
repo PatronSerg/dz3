@@ -14,9 +14,9 @@ int[] Pezda = new int[N];
 
 for (int i = 0; i < Jopa.Length; i++)
 {
-    Console.WriteLine($"Задайте {i} координату первой точки пространства:");
+    Console.WriteLine($"Задайте {i+1} координату первой точки пространства:");
     Jopa[i]=Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine($"Задайте {i} координату второй точки пространства:");
+    Console.WriteLine($"Задайте {i+1} координату второй точки пространства:");
     Pezda[i]=Convert.ToInt32(Console.ReadLine());
     // Console.WriteLine(Jopa[i]);
 }

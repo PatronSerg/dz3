@@ -2,7 +2,7 @@
 
 //Напишите программу, которая принимает на вход целое число любой разрядности и проверяет, является ли оно палиндромом. Через строку нельзя решать само собой.
 
-static bool IsPalindrome(int number)
+static bool IsPalindrome(int number) 
 {
     int originalNumber = number;
     int reversedNumber = 0;

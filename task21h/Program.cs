@@ -33,19 +33,5 @@ double Rast(double[] Shlepa, double[] Clepa)
     huesha = huesha + Math.Pow(Clepa[i] - Shlepa[i], 2);
     }
     return Math.Sqrt(huesha);
-    
-    //return Math.Sqrt((Math.Pow(x2 - x1, 2)) + (Math.Pow(y2 - y1, 2)) + (Math.Pow(z2 - z1, 2)));
 }
 
-
-
-
-
-
-
-
-// for(int i=0;i<N;i++);
-// {
-
-//     int x1 = Convert.ToInt32(Console.ReadLine());
-// }

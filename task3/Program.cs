@@ -5,15 +5,46 @@
 // сколько времени отработала программа. В конце вывести результат проверки истинности этого утверждения.
 
 
-Console.WriteLine(!(a && b && c) == !a || !b || !c);
+//Console.WriteLine(!(a && b && c) == !a || !b || !c);
+using System.Diagnostics;
 
-Random lesha = new Random();
-bool[] iarek = new bool[lesha.Next(5, 26)];
-for (int i = 0; i < iarek.Length; i++)
+bool XraZ()
 {
-    iarek[i] = Convert.ToBoolean(lesha.Next(0, 2));
+    Random lesha = new Random();
+
+    bool[] iarek = new bool[lesha.Next(5, 26)];
+
+    for (int i = 0; i < iarek.Length; i++)
+    {
+        iarek[i] = Convert.ToBoolean(lesha.Next(0, 2));
+    }
+
+    //Console.WriteLine(iarek[0]);
+
+    bool left = iarek[0] && iarek[1];
+    bool pravaia = !iarek[0] || !iarek[1];
+
+    for (int i = 2; i < iarek.Length; i++)
+    {
+        left = left && iarek[i];
+        pravaia = pravaia || !iarek[i];
+    }
+    return !left == pravaia;
+
 }
-for (int i = 0; i < iarek.Length; i++)
+
+//Console.WriteLine(XraZ());
+
+
+System.Diagnostics.Stopwatch sw = new Stopwatch();
+sw.Start();
+Console.WriteLine("");
+for (int i = 0; i < 100; i++)
 {
-    ;
+    Console.WriteLine(XraZ());
 }
+sw.Stop();
+Console.WriteLine((sw.ElapsedMilliseconds / 100.0).ToString());
+
+
+

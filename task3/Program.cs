@@ -7,7 +7,7 @@
 
 //Console.WriteLine(!(a && b && c) == !a || !b || !c);
 using System.Diagnostics;
-
+DateTime startTime = DateTime.Now;
 bool XraZ()
 {
     Random lesha = new Random();
@@ -38,7 +38,6 @@ bool XraZ()
 
 System.Diagnostics.Stopwatch sw = new Stopwatch();
 sw.Start();
-Console.WriteLine("");
 for (int i = 0; i < 100; i++)
 {
     Console.WriteLine(XraZ());
@@ -47,4 +46,11 @@ sw.Stop();
 Console.WriteLine((sw.ElapsedMilliseconds / 100.0).ToString());
 
 
+
+// Измеряемый код
+
+DateTime endTime = DateTime.Now;
+TimeSpan timeElapsed = endTime - startTime;
+
+Console.WriteLine("Время выполнения программы: " + timeElapsed.TotalMilliseconds + " мс");
 

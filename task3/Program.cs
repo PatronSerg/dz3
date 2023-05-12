@@ -7,6 +7,8 @@
 
 //Console.WriteLine(!(a && b && c) == !a || !b || !c);
 using System.Diagnostics;
+System.Diagnostics.Stopwatch sw = new Stopwatch();
+sw.Start();
 DateTime startTime = DateTime.Now;
 bool XraZ()
 {
@@ -36,8 +38,7 @@ bool XraZ()
 //Console.WriteLine(XraZ());
 
 
-System.Diagnostics.Stopwatch sw = new Stopwatch();
-sw.Start();
+
 for (int i = 0; i < 100; i++)
 {
     Console.WriteLine(XraZ());
